@@ -4,8 +4,8 @@ Sparky is an ASUS ProArt P16 (H7607BA) with an NVIDIA RTX Spark N1X, running Win
 Its NPU is an NVIDIA **DLA** (Deep Learning Accelerator, the Jetson accelerator family). This
 folder finds it, runs models on it from Python, and measures what it can do.
 
-- [docs/architecture.html](docs/architecture.html): the architecture in pictures: block diagrams, the
-  software stack, and charts of every measurement. Download it and open it in a browser.
+- [The architecture in pictures](https://roberthendriksen.github.io/rtx-spark-npu/): block diagrams,
+  the software stack, and charts of every measurement. Source: `docs/architecture.html`.
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md): the same in text, with every claim tagged measured,
   read, reported or inferred.
 - `results/`: raw benchmark output.

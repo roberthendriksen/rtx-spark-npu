@@ -5,7 +5,7 @@ accelerator family NVIDIA ships in Jetson Xavier and Orin. On Windows on Arm it 
 exactly one stack: **TensorRT's DLA backend to compile, cuDLA in hybrid mode to run**. It delivers
 about 4.3 TOPS of FP16 compute on this machine today.
 
-The same content as pictures: [architecture.html](architecture.html).
+The same content as pictures: <https://roberthendriksen.github.io/rtx-spark-npu/>.
 
 Everything here was measured on Sparky (ASUS ProArt P16 H7607BA) on 18 Nov 2026 unless a row says
 otherwise. Each claim is tagged:
