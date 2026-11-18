@@ -1,0 +1,58 @@
+{
+ "date": "2026-11-18 15:10",
+ "power": "AC, Standard plan",
+ "model": "encoder e5-small class, 64 tokens",
+ "back_to_back_ms": 3.28,
+ "idle_gap": {
+  "0.1": {
+   "median_ms": 5.3,
+   "max_ms": 6.7
+  },
+  "0.25": {
+   "median_ms": 4.6,
+   "max_ms": 7.0
+  },
+  "0.5": {
+   "median_ms": 5.7,
+   "max_ms": 795.9
+  },
+  "1.0": {
+   "median_ms": 197.2,
+   "max_ms": 549.4
+  },
+  "2.0": {
+   "median_ms": 9.0,
+   "max_ms": 655.3
+  },
+  "5.0": {
+   "median_ms": 143.3,
+   "max_ms": 826.6
+  }
+ },
+ "keep_warm": {
+  "none": {
+   "median_ms": 45.9,
+   "max_ms": 741.7,
+   "idle_power": {
+    "npu_w": 1.0,
+    "gpu_w": 5.15
+   }
+  },
+  "npu-tick": {
+   "median_ms": 6.4,
+   "max_ms": 10.9,
+   "idle_power": {
+    "npu_w": 1.0,
+    "gpu_w": 1.39
+   }
+  },
+  "gpu-tick": {
+   "median_ms": 7.7,
+   "max_ms": 11.0,
+   "idle_power": {
+    "npu_w": 1.0,
+    "gpu_w": 1.0
+   }
+  }
+ }
+}

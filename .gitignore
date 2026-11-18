@@ -1,0 +1,23 @@
+# NVIDIA's and third parties' binaries: never redistribute. setup.ps1 fetches them from the source.
+/vendor/
+/targets/
+/tools/
+
+# Export and import tables of NVIDIA's DLLs. Regenerate with `rea inspect-native-exports <dll>`.
+/evidence/
+
+# Python environments and caches
+/.venv/
+/.venv-gpuload/
+__pycache__/
+*.pyc
+
+# Generated models, engines and loadables (rebuild with the scripts in src/)
+/models/
+*.onnx
+*.engine
+*.loadable
+*.npy
+
+# Local tooling
+/.claude/

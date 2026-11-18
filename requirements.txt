@@ -1,0 +1,8 @@
+# Windows 11 on Arm64, Python 3.13. Install with setup.ps1, or:
+#   uv pip install -r requirements.txt --index-strategy unsafe-best-match
+--extra-index-url https://pypi.nvidia.com
+tensorrt-cu13-libs==11.5.0.63
+tensorrt-cu13-bindings==11.5.0.63
+numpy==2.5.5
+onnx==1.23.2
+onnxruntime==1.32.0

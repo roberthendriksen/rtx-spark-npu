@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "date": "2026-11-18 15:17",
+  "power_at_start": "AC, Standard plan",
+  "power_at_end": "AC, Standard plan",
+  "seconds_per_case": 40.0
+ },
+ "cases": [
+  {
+   "name": "c256_k3_hw64_d32",
+   "c": 256,
+   "hw": 64,
+   "k": 3,
+   "depth": 32,
+   "groups": 1,
+   "sparsity": "dense",
+   "gmacs": 77.309,
+   "compile_s": 2.0,
+   "loadable_mb": 41.2,
+   "output_finite": true,
+   "output_nonzero_pct": 48.2,
+   "util_pct": 79.0,
+   "power_w": 1.54,
+   "power_w_max": 2.29,
+   "temp_c_max": 51.9,
+   "clock_mhz": 1105,
+   "clock_mhz_peak": 1105,
+   "clock_mhz_limit": 1562,
+   "status": "ok",
+   "latency_ms": 42.948,
+   "latency_ms_min": 35.134,
+   "ips": 23.3,
+   "tops": 3.6,
+   "tops_best": 4.401,
+   "tops_pipelined": 3.169,
+   "last_error": "cudlaSuccess",
+   "macs_per_cycle": 1629,
+   "tops_at_clock_limit": 5.089
+  }
+ ]
+}

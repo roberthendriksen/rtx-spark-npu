@@ -1,0 +1,3 @@
+c256_k3_hw64_d32                        77.31 GMAC    42.948 ms    3.60 TOPS (pipelined 3.17)  clock 1105 MHz  1629 MAC/cycle  at-limit 5.089  util 79.0%  1.54 W  finite=True
+
+peak: 3.60 TOPS (FP16) on c256_k3_hw64_d32

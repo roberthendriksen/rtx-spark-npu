@@ -1,0 +1,80 @@
+{
+ "date": "2026-11-18 15:19",
+ "gpu_load": "PyTorch FP16 6144x6144 matmul loop in a second process",
+ "e5small_64tok.gpu_idle.back_to_back": {
+  "n": 1019,
+  "median_ms": 3.8,
+  "p95_ms": 4.65,
+  "max_ms": 8.63
+ },
+ "e5small_64tok.gpu_idle.every_2s": {
+  "n": 6,
+  "median_ms": 291.74,
+  "p95_ms": 733.78,
+  "max_ms": 748.01
+ },
+ "e5base_64tok.gpu_idle.back_to_back": {
+  "n": 537,
+  "median_ms": 7.34,
+  "p95_ms": 8.21,
+  "max_ms": 11.74
+ },
+ "e5base_64tok.gpu_idle.every_2s": {
+  "n": 6,
+  "median_ms": 231.82,
+  "p95_ms": 799.73,
+  "max_ms": 825.05
+ },
+ "e5large_64tok_split2.gpu_idle.back_to_back": {
+  "n": 181,
+  "median_ms": 22.11,
+  "p95_ms": 23.78,
+  "max_ms": 25.46
+ },
+ "e5large_64tok_split2.gpu_idle.every_2s": {
+  "n": 6,
+  "median_ms": 373.69,
+  "p95_ms": 910.07,
+  "max_ms": 924.85
+ },
+ "gpu_load_env": "2.15.0+cu134 NVIDIA RTX Spark N1X (6144-core Blackwell RTX GPU)",
+ "e5small_64tok.gpu_saturated.back_to_back": {
+  "n": 475,
+  "median_ms": 8.36,
+  "p95_ms": 11.38,
+  "max_ms": 34.42
+ },
+ "e5small_64tok.gpu_saturated.every_2s": {
+  "n": 6,
+  "median_ms": 8.16,
+  "p95_ms": 10.57,
+  "max_ms": 10.76
+ },
+ "e5base_64tok.gpu_saturated.back_to_back": {
+  "n": 287,
+  "median_ms": 12.65,
+  "p95_ms": 17.1,
+  "max_ms": 38.79
+ },
+ "e5base_64tok.gpu_saturated.every_2s": {
+  "n": 6,
+  "median_ms": 15.27,
+  "p95_ms": 18.0,
+  "max_ms": 18.27
+ },
+ "e5large_64tok_split2.gpu_saturated.back_to_back": {
+  "n": 95,
+  "median_ms": 40.83,
+  "p95_ms": 45.32,
+  "max_ms": 70.37
+ },
+ "e5large_64tok_split2.gpu_saturated.every_2s": {
+  "n": 6,
+  "median_ms": 40.34,
+  "p95_ms": 42.62,
+  "max_ms": 42.79
+ },
+ "gpu_load_ips_alone": 42.11,
+ "gpu_load_ips_while_npu_measured": 40.05,
+ "gpu_load_ips_min_while_npu_measured": 23.77
+}

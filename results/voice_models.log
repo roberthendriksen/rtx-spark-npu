@@ -1,0 +1,10 @@
+encoder_e5small_seq64_matmul       CPU     7.23 ms | NPU: does not compile: layernormalization_588: DLA only supports LayerNormalization on 4 dimensional tensors. Number of dims received: 3 | Layer 'layernormalization_588' (NORMALIZATION): Unsupported on DLA.  | Layer 'reduce
+encoder_e5small_seq64_conv         CPU     8.15 ms | NPU     3.86 ms (p99 4.95) | x2.11  | rel err 0.115% cos 1.0 | 66.9 MB
+encoder_e5small_seq64_masked       CPU     8.13 ms | NPU     4.02 ms (p99 5.78) | x2.02  | rel err 0.202% cos 1.0 | 65.6 MB
+encoder_e5small_seq128_conv        CPU    14.02 ms | NPU     5.02 ms (p99 6.53) | x2.79  | rel err 0.138% cos 1.0 | 66.6 MB
+encoder_e5base_seq64_conv          CPU    22.26 ms | NPU     7.01 ms (p99 8.36) | x3.17  | rel err 0.127% cos 1.0 | 195.0 MB
+encoder_e5large_seq64_conv         CPU    73.61 ms | NPU: does not compile: {ForeignNode[conv_3...globalaveragepool_1129]}: DLA compilation failed with error code: 4390914 | [buildSingleLayer.cpp::nvinfer1::builder::buildSingleLayer::638] Error Code 2: Internal Error (Asserti
+encoder_whispertiny_seq400_conv    CPU    14.62 ms | NPU     5.77 ms (p99 7.11) | x2.53  | rel err 0.073% cos 1.0 | 22.3 MB
+tdnn_c512_3s                       CPU     5.17 ms | NPU     1.32 ms (p99 2.83) | x3.92  | rel err 0.052% cos 1.0 | 14.5 MB
+tdnn_c1024_3s                      CPU    17.55 ms | NPU     9.94 ms (p99 10.66) | x1.77  | rel err 0.051% cos 1.0 | 46.2 MB
+encoder_e5large_seq64_split2       CPU    94.36 ms | NPU    24.55 ms (p99 28.89) | x3.84  | rel err 0.209% cos 1.0 | 662.6 MB

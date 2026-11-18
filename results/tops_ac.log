@@ -1,0 +1,21 @@
+floor_c32_k3_hw32_d1                     0.01 GMAC     0.359 ms    0.05 TOPS (pipelined 0.05)  clock 936 MHz  28 MAC/cycle  at-limit 0.088  util 74.2%  1.0 W  finite=True
+c64_k3_hw128_d8                          4.83 GMAC     2.650 ms    3.65 TOPS (pipelined 3.54)  clock 1053 MHz  1732 MAC/cycle  at-limit 5.41  util 99.0%  1.68 W  finite=True
+c128_k3_hw64_d8                          4.83 GMAC     2.625 ms    3.68 TOPS (pipelined 3.59)  clock 1053 MHz  1748 MAC/cycle  at-limit 5.46  util 99.0%  1.61 W  finite=True
+c256_k3_hw32_d8                          4.83 GMAC     2.599 ms    3.72 TOPS (pipelined 3.65)  clock 1105 MHz  1682 MAC/cycle  at-limit 5.256  util 98.3%  1.64 W  finite=True
+c256_k3_hw64_d16                        38.66 GMAC    19.329 ms    4.00 TOPS (pipelined 3.97)  clock 1105 MHz  1810 MAC/cycle  at-limit 5.654  util 98.0%  1.66 W  finite=True
+c256_k3_hw64_d32                        77.31 GMAC    76.179 ms    2.03 TOPS (pipelined 2.01)  clock 1105 MHz  918 MAC/cycle  at-limit 2.87  util 49.0%  1.45 W  finite=True
+c512_k3_hw32_d16                        38.66 GMAC    53.080 ms    1.46 TOPS (pipelined 1.25)  clock 1044 MHz  698 MAC/cycle  at-limit 2.178  util 30.9%  1.63 W  finite=True
+c512_k3_hw64_d8                         77.31 GMAC   171.530 ms    0.90 TOPS (pipelined 1.18)  clock 1008 MHz  447 MAC/cycle  at-limit 1.396  util 22.5%  1.53 W  finite=True
+c1024_k3_hw32_d4                        38.66 GMAC   103.911 ms    0.74 TOPS (pipelined 0.24)  clock 1021 MHz  364 MAC/cycle  at-limit 1.138  util 13.3%  1.63 W  finite=True
+c192_k3_hw64_d16                        21.74 GMAC    13.484 ms    3.23 TOPS (pipelined 3.20)  clock 1105 MHz  1459 MAC/cycle  at-limit 4.559  util 99.0%  1.42 W  finite=True
+c256_k1_hw64_d16                         4.29 GMAC     2.495 ms    3.44 TOPS (pipelined 3.39)  clock 1105 MHz  1558 MAC/cycle  at-limit 4.867  util 96.3%  2.02 W  finite=True
+c512_k1_hw64_d16                        17.18 GMAC     8.708 ms    3.95 TOPS (pipelined 3.90)  clock 1105 MHz  1785 MAC/cycle  at-limit 5.578  util 95.3%  2.27 W  finite=True
+c1024_k1_hw32_d16                       17.18 GMAC     8.754 ms    3.92 TOPS (pipelined 3.87)  clock 1105 MHz  1776 MAC/cycle  at-limit 5.548  util 93.5%  2.15 W  finite=True
+c128_k5_hw64_d8                         13.42 GMAC     6.685 ms    4.02 TOPS (pipelined 3.79)  clock 1049 MHz  1914 MAC/cycle  at-limit 5.98  util 96.1%  2.34 W  finite=True
+depthwise_c256_k3_hw64_d16               0.15 GMAC     4.276 ms    0.07 TOPS (pipelined 0.07)  clock 1105 MHz  32 MAC/cycle  at-limit 0.1  util 74.9%  1.0 W  finite=True
+c256_k3_hw64_d16_unstructured50         38.66 GMAC    18.036 ms    4.29 TOPS (pipelined 4.30)  clock 1105 MHz  1940 MAC/cycle  at-limit 6.059  util 98.0%  1.44 W  finite=True
+c256_k3_hw64_d16_unstructured90         38.66 GMAC    18.038 ms    4.29 TOPS (pipelined 4.28)  clock 1105 MHz  1939 MAC/cycle  at-limit 6.059  util 98.0%  1.12 W  finite=True
+c256_k3_hw64_d16_struct2of4             38.66 GMAC    18.028 ms    4.29 TOPS (pipelined 4.28)  clock 1105 MHz  1940 MAC/cycle  at-limit 6.061  util 98.0%  1.45 W  finite=True
+c256_k3_hw64_d16_prunedhalf             38.66 GMAC    18.002 ms    4.29 TOPS (pipelined 4.29)  clock 1105 MHz  1943 MAC/cycle  at-limit 6.07  util 97.9%  1.23 W  finite=True
+
+peak: 4.30 TOPS (FP16) on c256_k3_hw64_d16_unstructured50

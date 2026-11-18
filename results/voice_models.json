@@ -1,0 +1,135 @@
+{
+ "meta": {
+  "date": "2026-11-18 15:00",
+  "cpu_threads": 8
+ },
+ "cases": [
+  {
+   "name": "encoder_e5small_seq64_matmul",
+   "what": "12 layers, d=384, 12 heads, 64 tokens (e5-small / MiniLM class), MatMul form",
+   "cpu_ms": 7.23,
+   "status": "does not compile",
+   "error": "layernormalization_588: DLA only supports LayerNormalization on 4 dimensional tensors. Number of dims received: 3 | Layer 'layernormalization_588' (NORMALIZATION): Unsupported on DLA.  | Layer 'reducemean_590' (REDUCE): Unsupported on DLA.  | IBuilder::buildSerializedNetwork: Error Code 4: Internal Error (Layer 'matmul_2' is not supported on DLA but GPU fallback is not enabled, nor permitted on DL"
+  },
+  {
+   "name": "encoder_e5small_seq64_conv",
+   "what": "same, 1x1-conv form",
+   "cpu_ms": 8.15,
+   "compile_s": 12.3,
+   "loadable_mb": 66.9,
+   "status": "ok",
+   "npu_ms": 3.86,
+   "npu_ms_p99": 4.95,
+   "speedup": 2.11,
+   "rel_l2_err_pct": 0.115,
+   "cosine": 1.0,
+   "finite": true
+  },
+  {
+   "name": "encoder_e5small_seq64_masked",
+   "what": "same, plus an attention-mask input (last 24 of 64 tokens are padding), no pooling",
+   "cpu_ms": 8.13,
+   "compile_s": 12.3,
+   "loadable_mb": 65.6,
+   "status": "ok",
+   "npu_ms": 4.02,
+   "npu_ms_p99": 5.78,
+   "speedup": 2.02,
+   "rel_l2_err_pct": 0.202,
+   "cosine": 1.0,
+   "finite": true
+  },
+  {
+   "name": "encoder_e5small_seq128_conv",
+   "what": "same, 128 tokens",
+   "cpu_ms": 14.02,
+   "compile_s": 12.3,
+   "loadable_mb": 66.6,
+   "status": "ok",
+   "npu_ms": 5.02,
+   "npu_ms_p99": 6.53,
+   "speedup": 2.79,
+   "rel_l2_err_pct": 0.138,
+   "cosine": 1.0,
+   "finite": true
+  },
+  {
+   "name": "encoder_e5base_seq64_conv",
+   "what": "12 layers, d=768, 12 heads, 64 tokens (e5-base class)",
+   "cpu_ms": 22.26,
+   "compile_s": 15.3,
+   "loadable_mb": 195.0,
+   "status": "ok",
+   "npu_ms": 7.01,
+   "npu_ms_p99": 8.36,
+   "speedup": 3.17,
+   "rel_l2_err_pct": 0.127,
+   "cosine": 1.0,
+   "finite": true
+  },
+  {
+   "name": "encoder_e5large_seq64_conv",
+   "what": "24 layers, d=1024, 16 heads, 64 tokens (e5-large / bge-m3 class), one loadable",
+   "cpu_ms": 73.61,
+   "status": "does not compile",
+   "error": "{ForeignNode[conv_3...globalaveragepool_1129]}: DLA compilation failed with error code: 4390914 | [buildSingleLayer.cpp::nvinfer1::builder::buildSingleLayer::638] Error Code 2: Internal Error (Assertion r failed.  In nvinfer1::builder::buildSingleLayer at C:\\_src\\optimizer\\builder\\buildSingleLayer.cpp:638)"
+  },
+  {
+   "name": "encoder_whispertiny_seq400_conv",
+   "what": "4 layers, d=384, 6 heads, 400 frames = 8 s (Smart Turn class)",
+   "cpu_ms": 14.62,
+   "compile_s": 2.7,
+   "loadable_mb": 22.3,
+   "status": "ok",
+   "npu_ms": 5.77,
+   "npu_ms_p99": 7.11,
+   "speedup": 2.53,
+   "rel_l2_err_pct": 0.073,
+   "cosine": 1.0,
+   "finite": true
+  },
+  {
+   "name": "tdnn_c512_3s",
+   "what": "speaker trunk, 80 mel x 300 frames (3 s), C=512, 3 SE blocks, 192-d embedding",
+   "cpu_ms": 5.17,
+   "compile_s": 0.5,
+   "loadable_mb": 14.5,
+   "status": "ok",
+   "npu_ms": 1.32,
+   "npu_ms_p99": 2.83,
+   "speedup": 3.92,
+   "rel_l2_err_pct": 0.052,
+   "cosine": 1.0,
+   "finite": true
+  },
+  {
+   "name": "tdnn_c1024_3s",
+   "what": "speaker trunk, C=1024 (ECAPA-TDNN large class)",
+   "cpu_ms": 17.55,
+   "compile_s": 1.0,
+   "loadable_mb": 46.2,
+   "status": "ok",
+   "npu_ms": 9.94,
+   "npu_ms_p99": 10.66,
+   "speedup": 1.77,
+   "rel_l2_err_pct": 0.051,
+   "cosine": 1.0,
+   "finite": true
+  },
+  {
+   "name": "encoder_e5large_seq64_split2",
+   "what": "24 layers, d=1024, 16 heads, 64 tokens, as two chained 12-layer loadables",
+   "cpu_ms": 94.36,
+   "compile_s": 39.7,
+   "loadable_mb": 662.6,
+   "status": "ok",
+   "npu_ms": 24.55,
+   "npu_ms_p99": 28.89,
+   "speedup": 3.84,
+   "rel_l2_err_pct": 0.209,
+   "cosine": 1.0,
+   "finite": true,
+   "note": "NPU time includes host copies of input, intermediate and output"
+  }
+ ]
+}
